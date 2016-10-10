@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>1073409366830-igj2r1bhg0nigrh85e20eimhs8epuc82.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1073409366830-igj2r1bhg0nigrh85e20eimhs8epuc82</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAbhKnZSiirxUzu6Vwq00Ysc-DnXORm0qE</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1073409366830</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>giraffe.in.ua-gmail.com.giraffe-social-firebase</string>
+	<key>PROJECT_ID</key>
+	<string>giraffe-social</string>
+	<key>STORAGE_BUCKET</key>
+	<string>giraffe-social.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1073409366830:ios:fde9b3e1a66f075d</string>
+	<key>DATABASE_URL</key>
+	<string>https://giraffe-social.firebaseio.com</string>
+</dict>
+</plist>

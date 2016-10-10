@@ -1,0 +1,6 @@
+framework module Pods_giraffe_social_firebase {
+  umbrella header "Pods-giraffe-social-firebase-umbrella.h"
+
+  export *
+  module * { export * }
+}

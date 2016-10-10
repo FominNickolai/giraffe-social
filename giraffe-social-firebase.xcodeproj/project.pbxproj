@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		84ADF22B1DABB2B700E02591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADF22A1DABB2B700E02591 /* AppDelegate.swift */; };
-		84ADF22D1DABB2B700E02591 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADF22C1DABB2B700E02591 /* ViewController.swift */; };
+		84ADF22D1DABB2B700E02591 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADF22C1DABB2B700E02591 /* SignInVC.swift */; };
 		84ADF2301DABB2B700E02591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ADF22E1DABB2B700E02591 /* Main.storyboard */; };
 		84ADF2321DABB2B700E02591 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84ADF2311DABB2B700E02591 /* Assets.xcassets */; };
 		84ADF2351DABB2B700E02591 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ADF2331DABB2B700E02591 /* LaunchScreen.storyboard */; };
+		84ADF23D1DABB35400E02591 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 84ADF23C1DABB35400E02591 /* GoogleService-Info.plist */; };
+		EE81D0D267DCA151348C5CAB /* Pods_giraffe_social_firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAE2BA493C9B365589BBC753 /* Pods_giraffe_social_firebase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		11D3FA978BD56B7963DCF0E4 /* Pods-giraffe-social-firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giraffe-social-firebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giraffe-social-firebase/Pods-giraffe-social-firebase.debug.xcconfig"; sourceTree = "<group>"; };
 		84ADF2271DABB2B700E02591 /* giraffe-social-firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "giraffe-social-firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84ADF22A1DABB2B700E02591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		84ADF22C1DABB2B700E02591 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		84ADF22C1DABB2B700E02591 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		84ADF22F1DABB2B700E02591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84ADF2311DABB2B700E02591 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84ADF2341DABB2B700E02591 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84ADF2361DABB2B700E02591 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84ADF23C1DABB35400E02591 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AAE2BA493C9B365589BBC753 /* Pods_giraffe_social_firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_giraffe_social_firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E1EFB5421933F6FE24C56B58 /* Pods-giraffe-social-firebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giraffe-social-firebase.release.xcconfig"; path = "Pods/Target Support Files/Pods-giraffe-social-firebase/Pods-giraffe-social-firebase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,59 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE81D0D267DCA151348C5CAB /* Pods_giraffe_social_firebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		236F5A8CF274E29EA628C92F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				11D3FA978BD56B7963DCF0E4 /* Pods-giraffe-social-firebase.debug.xcconfig */,
+				E1EFB5421933F6FE24C56B58 /* Pods-giraffe-social-firebase.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		446C7FED2BC49C0B6D5F1233 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AAE2BA493C9B365589BBC753 /* Pods_giraffe_social_firebase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		849480A41DABB641006843EC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		849480A51DABB647006843EC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		849480A61DABB64B006843EC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				84ADF22C1DABB2B700E02591 /* SignInVC.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		84ADF21E1DABB2B700E02591 = {
 			isa = PBXGroup;
 			children = (
 				84ADF2291DABB2B700E02591 /* giraffe-social-firebase */,
 				84ADF2281DABB2B700E02591 /* Products */,
+				236F5A8CF274E29EA628C92F /* Pods */,
+				446C7FED2BC49C0B6D5F1233 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +102,15 @@
 		84ADF2291DABB2B700E02591 /* giraffe-social-firebase */ = {
 			isa = PBXGroup;
 			children = (
+				849480A41DABB641006843EC /* Model */,
+				849480A51DABB647006843EC /* View */,
+				849480A61DABB64B006843EC /* Controller */,
 				84ADF22A1DABB2B700E02591 /* AppDelegate.swift */,
-				84ADF22C1DABB2B700E02591 /* ViewController.swift */,
 				84ADF22E1DABB2B700E02591 /* Main.storyboard */,
 				84ADF2311DABB2B700E02591 /* Assets.xcassets */,
 				84ADF2331DABB2B700E02591 /* LaunchScreen.storyboard */,
 				84ADF2361DABB2B700E02591 /* Info.plist */,
+				84ADF23C1DABB35400E02591 /* GoogleService-Info.plist */,
 			);
 			path = "giraffe-social-firebase";
 			sourceTree = "<group>";
@@ -71,9 +122,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 84ADF2391DABB2B700E02591 /* Build configuration list for PBXNativeTarget "giraffe-social-firebase" */;
 			buildPhases = (
+				D84EB4E6EE980E4506759553 /* [CP] Check Pods Manifest.lock */,
 				84ADF2231DABB2B700E02591 /* Sources */,
 				84ADF2241DABB2B700E02591 /* Frameworks */,
 				84ADF2251DABB2B700E02591 /* Resources */,
+				C0CC255E0F522DAFA3625BDF /* [CP] Embed Pods Frameworks */,
+				324BBDD745D6EBAAE042827D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -125,6 +179,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84ADF2351DABB2B700E02591 /* LaunchScreen.storyboard in Resources */,
+				84ADF23D1DABB35400E02591 /* GoogleService-Info.plist in Resources */,
 				84ADF2321DABB2B700E02591 /* Assets.xcassets in Resources */,
 				84ADF2301DABB2B700E02591 /* Main.storyboard in Resources */,
 			);
@@ -132,12 +187,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		324BBDD745D6EBAAE042827D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-giraffe-social-firebase/Pods-giraffe-social-firebase-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0CC255E0F522DAFA3625BDF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-giraffe-social-firebase/Pods-giraffe-social-firebase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D84EB4E6EE980E4506759553 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		84ADF2231DABB2B700E02591 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84ADF22D1DABB2B700E02591 /* ViewController.swift in Sources */,
+				84ADF22D1DABB2B700E02591 /* SignInVC.swift in Sources */,
 				84ADF22B1DABB2B700E02591 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,6 +360,7 @@
 		};
 		84ADF23A1DABB2B700E02591 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 11D3FA978BD56B7963DCF0E4 /* Pods-giraffe-social-firebase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X3563PB3YJ;
@@ -270,6 +374,7 @@
 		};
 		84ADF23B1DABB2B700E02591 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1EFB5421933F6FE24C56B58 /* Pods-giraffe-social-firebase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = X3563PB3YJ;
@@ -300,6 +405,7 @@
 				84ADF23B1DABB2B700E02591 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
