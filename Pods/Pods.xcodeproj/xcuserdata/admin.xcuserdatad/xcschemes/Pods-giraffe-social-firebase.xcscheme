@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0810"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F98863260A6EDC47B93198EB92E956C5"
+               BlueprintIdentifier = "DD850E91AD924F703C970C2216450ACC"
                BuildableName = "Pods_giraffe_social_firebase.framework"
                BlueprintName = "Pods-giraffe-social-firebase"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F98863260A6EDC47B93198EB92E956C5"
+            BlueprintIdentifier = "DD850E91AD924F703C970C2216450ACC"
             BuildableName = "Pods_giraffe_social_firebase.framework"
             BlueprintName = "Pods-giraffe-social-firebase"
             ReferencedContainer = "container:Pods.xcodeproj">

@@ -28,6 +28,7 @@
 		84A22E911DAEB6AD003E4D6B /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		84A22E931DAEB84F003E4D6B /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
 		84A22E951DAEB980003E4D6B /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
+		84A22EA01DAEC5B8003E4D6B /* giraffe-social-firebase.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "giraffe-social-firebase.entitlements"; sourceTree = "<group>"; };
 		84ADF2271DABB2B700E02591 /* giraffe-social-firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "giraffe-social-firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84ADF22A1DABB2B700E02591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84ADF22C1DABB2B700E02591 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -124,6 +125,7 @@
 		84ADF2291DABB2B700E02591 /* giraffe-social-firebase */ = {
 			isa = PBXGroup;
 			children = (
+				84A22EA01DAEC5B8003E4D6B /* giraffe-social-firebase.entitlements */,
 				84A22E901DAEB504003E4D6B /* Util */,
 				849480A41DABB641006843EC /* Model */,
 				849480A51DABB647006843EC /* View */,
@@ -175,6 +177,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = X3563PB3YJ;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -393,7 +400,12 @@
 			baseConfigurationReference = 11D3FA978BD56B7963DCF0E4 /* Pods-giraffe-social-firebase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "giraffe-social-firebase/giraffe-social-firebase.entitlements";
 				DEVELOPMENT_TEAM = X3563PB3YJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/giraffe-social-firebase",
+				);
 				INFOPLIST_FILE = "giraffe-social-firebase/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "giraffe.in.ua-gmail.com.giraffe-social-firebase";
@@ -407,7 +419,12 @@
 			baseConfigurationReference = E1EFB5421933F6FE24C56B58 /* Pods-giraffe-social-firebase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "giraffe-social-firebase/giraffe-social-firebase.entitlements";
 				DEVELOPMENT_TEAM = X3563PB3YJ;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/giraffe-social-firebase",
+				);
 				INFOPLIST_FILE = "giraffe-social-firebase/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "giraffe.in.ua-gmail.com.giraffe-social-firebase";
