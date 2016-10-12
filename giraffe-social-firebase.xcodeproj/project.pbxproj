@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84A22E8D1DAEB473003E4D6B /* FancyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A22E8C1DAEB473003E4D6B /* FancyView.swift */; };
+		84A22E8F1DAEB501003E4D6B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A22E8E1DAEB501003E4D6B /* Constants.swift */; };
+		84A22E921DAEB6AD003E4D6B /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A22E911DAEB6AD003E4D6B /* RoundButton.swift */; };
+		84A22E941DAEB84F003E4D6B /* FancyField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A22E931DAEB84F003E4D6B /* FancyField.swift */; };
+		84A22E961DAEB980003E4D6B /* FancyBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A22E951DAEB980003E4D6B /* FancyBtn.swift */; };
 		84ADF22B1DABB2B700E02591 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADF22A1DABB2B700E02591 /* AppDelegate.swift */; };
 		84ADF22D1DABB2B700E02591 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84ADF22C1DABB2B700E02591 /* SignInVC.swift */; };
 		84ADF2301DABB2B700E02591 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84ADF22E1DABB2B700E02591 /* Main.storyboard */; };
@@ -18,6 +23,11 @@
 
 /* Begin PBXFileReference section */
 		11D3FA978BD56B7963DCF0E4 /* Pods-giraffe-social-firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giraffe-social-firebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giraffe-social-firebase/Pods-giraffe-social-firebase.debug.xcconfig"; sourceTree = "<group>"; };
+		84A22E8C1DAEB473003E4D6B /* FancyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyView.swift; sourceTree = "<group>"; };
+		84A22E8E1DAEB501003E4D6B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		84A22E911DAEB6AD003E4D6B /* RoundButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		84A22E931DAEB84F003E4D6B /* FancyField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyField.swift; sourceTree = "<group>"; };
+		84A22E951DAEB980003E4D6B /* FancyBtn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FancyBtn.swift; sourceTree = "<group>"; };
 		84ADF2271DABB2B700E02591 /* giraffe-social-firebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "giraffe-social-firebase.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		84ADF22A1DABB2B700E02591 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84ADF22C1DABB2B700E02591 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -69,6 +79,10 @@
 		849480A51DABB647006843EC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				84A22E8C1DAEB473003E4D6B /* FancyView.swift */,
+				84A22E911DAEB6AD003E4D6B /* RoundButton.swift */,
+				84A22E931DAEB84F003E4D6B /* FancyField.swift */,
+				84A22E951DAEB980003E4D6B /* FancyBtn.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -79,6 +93,14 @@
 				84ADF22C1DABB2B700E02591 /* SignInVC.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		84A22E901DAEB504003E4D6B /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				84A22E8E1DAEB501003E4D6B /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		84ADF21E1DABB2B700E02591 = {
@@ -102,6 +124,7 @@
 		84ADF2291DABB2B700E02591 /* giraffe-social-firebase */ = {
 			isa = PBXGroup;
 			children = (
+				84A22E901DAEB504003E4D6B /* Util */,
 				849480A41DABB641006843EC /* Model */,
 				849480A51DABB647006843EC /* View */,
 				849480A61DABB64B006843EC /* Controller */,
@@ -240,8 +263,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A22E941DAEB84F003E4D6B /* FancyField.swift in Sources */,
 				84ADF22D1DABB2B700E02591 /* SignInVC.swift in Sources */,
+				84A22E921DAEB6AD003E4D6B /* RoundButton.swift in Sources */,
 				84ADF22B1DABB2B700E02591 /* AppDelegate.swift in Sources */,
+				84A22E8D1DAEB473003E4D6B /* FancyView.swift in Sources */,
+				84A22E8F1DAEB501003E4D6B /* Constants.swift in Sources */,
+				84A22E961DAEB980003E4D6B /* FancyBtn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
