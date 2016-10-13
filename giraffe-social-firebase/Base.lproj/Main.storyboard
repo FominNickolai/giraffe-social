@@ -133,11 +133,47 @@
                     <connections>
                         <outlet property="emailField" destination="NkR-W1-u6Q" id="I5B-B0-XHW"/>
                         <outlet property="passwordField" destination="suf-7I-NIm" id="cK2-PC-PIs"/>
+                        <segue destination="CZc-8y-rtq" kind="show" identifier="goToFeed" id="CBZ-Pf-yr8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="1V1-nV-Nqa">
+            <objects>
+                <viewController id="CZc-8y-rtq" customClass="FeedVC" customModule="giraffe_social_firebase" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AYy-Ny-BYc"/>
+                        <viewControllerLayoutGuide type="bottom" id="EQR-cI-tJG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T3M-4V-jZg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsl-ek-zAV">
+                                <rect key="frame" x="153.5" y="317" width="67" height="32"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="0.99607843139999996" green="0.30588235289999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signOutTapped:" destination="CZc-8y-rtq" eventType="touchUpInside" id="mwd-KY-vdM"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignVC" id="3Gi-Cg-83W"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.73725490199999999" blue="0.83137254900000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="nsl-ek-zAV" firstAttribute="centerY" secondItem="T3M-4V-jZg" secondAttribute="centerY" id="mzs-HN-XWJ"/>
+                            <constraint firstItem="nsl-ek-zAV" firstAttribute="centerX" secondItem="T3M-4V-jZg" secondAttribute="centerX" id="ohz-bB-h8v"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KHm-Xg-0PH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="37"/>
         </scene>
     </scenes>
     <resources>
