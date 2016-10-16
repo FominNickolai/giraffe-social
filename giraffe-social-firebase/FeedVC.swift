@@ -22,7 +22,7 @@ class FeedVC: UIViewController {
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             
             if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
-                
+                self.posts.removeAll(keepingCapacity: true)
                 for snap in snapshot {
                     
                     print("SNAP: \(snap)")
@@ -79,8 +79,7 @@ extension FeedVC: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
         
-        let post = posts[indexPath.row]
-        print("NICK: \(post.caption)")
+        cell.configureCell(post: posts[indexPath.row])
         
         return cell
         
