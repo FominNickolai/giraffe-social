@@ -14,13 +14,34 @@ class FeedVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var posts = [Post]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
             
-            let postDict = snapshot.value as! [String : AnyObject]
-            print(postDict)
+            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                
+                for snap in snapshot {
+                    
+                    print("SNAP: \(snap)")
+                    
+                    if let postDict = snap.value as? Dictionary<String, AnyObject> {
+                        
+                        let key = snap.key
+                        let post = Post(postKey: key, postData: postDict)
+                        
+                        self.posts.append(post)
+                        
+                    }
+                    
+                }
+                
+            }
+            
+            self.tableView.reloadData()
+            
         
         })
         
@@ -50,13 +71,16 @@ extension FeedVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "PostCell", for: indexPath) as! PostCell
         
+        let post = posts[indexPath.row]
+        print("NICK: \(post.caption)")
         
         return cell
         
