@@ -14,7 +14,9 @@ class FeedVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var imageAdd: CircleView!
     var posts = [Post]()
+    var imagePicker: UIImagePickerController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,16 @@ class FeedVC: UIViewController {
             
         
         })
+        
+        imagePicker = UIImagePickerController()
+        imagePicker?.allowsEditing = true
+        imagePicker?.sourceType = .photoLibrary
+        imagePicker?.delegate = self
+        
+    }
+    @IBAction func addImageTapped(_ sender: UITapGestureRecognizer) {
+        
+        present(imagePicker, animated: true, completion: nil)
         
     }
     
@@ -93,7 +105,20 @@ extension FeedVC: UITableViewDelegate {
     
 }
 
-
+extension FeedVC: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            imageAdd.contentMode = .scaleAspectFill
+            imageAdd.image = pickedImage
+        }
+        
+        imagePicker?.dismiss(animated: true, completion: nil)
+        
+    }
+    
+}
 
 
 
