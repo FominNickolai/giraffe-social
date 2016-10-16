@@ -17,7 +17,13 @@ class FeedVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        DataService.ds.REF_POSTS.observe(.value, with: { (snapshot) in
+            
+            let postDict = snapshot.value as! [String : AnyObject]
+            print(postDict)
+        
+        })
+        
     }
     
     @IBAction func signOutTapped(_ sender: UIButton) {
