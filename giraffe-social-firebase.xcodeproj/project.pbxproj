@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8452BB431DB3619E00CDC66E /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8452BB421DB3619E00CDC66E /* DataService.swift */; };
 		845CFCA31DAFA20E001D5D8D /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CFCA21DAFA20E001D5D8D /* FeedVC.swift */; };
 		845CFCA51DAFB127001D5D8D /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CFCA41DAFB127001D5D8D /* CircleView.swift */; };
 		845CFCA71DAFBE46001D5D8D /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845CFCA61DAFBE46001D5D8D /* PostCell.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		11D3FA978BD56B7963DCF0E4 /* Pods-giraffe-social-firebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-giraffe-social-firebase.debug.xcconfig"; path = "Pods/Target Support Files/Pods-giraffe-social-firebase/Pods-giraffe-social-firebase.debug.xcconfig"; sourceTree = "<group>"; };
+		8452BB421DB3619E00CDC66E /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		845CFCA21DAFA20E001D5D8D /* FeedVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
 		845CFCA41DAFB127001D5D8D /* CircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		845CFCA61DAFBE46001D5D8D /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 				AAE2BA493C9B365589BBC753 /* Pods_giraffe_social_firebase.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8452BB411DB3618200CDC66E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8452BB421DB3619E00CDC66E /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		849480A41DABB641006843EC /* Model */ = {
@@ -134,6 +144,7 @@
 		84ADF2291DABB2B700E02591 /* giraffe-social-firebase */ = {
 			isa = PBXGroup;
 			children = (
+				8452BB411DB3618200CDC66E /* Services */,
 				84A22EA01DAEC5B8003E4D6B /* giraffe-social-firebase.entitlements */,
 				84A22E901DAEB504003E4D6B /* Util */,
 				849480A41DABB641006843EC /* Model */,
@@ -284,6 +295,7 @@
 				84ADF22D1DABB2B700E02591 /* SignInVC.swift in Sources */,
 				84A22E921DAEB6AD003E4D6B /* RoundButton.swift in Sources */,
 				84ADF22B1DABB2B700E02591 /* AppDelegate.swift in Sources */,
+				8452BB431DB3619E00CDC66E /* DataService.swift in Sources */,
 				845CFCA31DAFA20E001D5D8D /* FeedVC.swift in Sources */,
 				84A22E8D1DAEB473003E4D6B /* FancyView.swift in Sources */,
 				84A22E8F1DAEB501003E4D6B /* Constants.swift in Sources */,
