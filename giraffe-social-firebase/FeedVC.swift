@@ -15,9 +15,11 @@ class FeedVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var imageAdd: CircleView!
+    @IBOutlet weak var captionField: FancyField!
     var posts = [Post]()
     var imagePicker: UIImagePickerController!
     static var imageCache: NSCache<NSString, UIImage> = NSCache()
+    var imageSelected = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +61,64 @@ class FeedVC: UIViewController {
         present(imagePicker, animated: true, completion: nil)
         
     }
+    @IBAction func postBtnTapped(_ sender: RoundButton) {
+        
+        guard let caption = captionField.text, caption != "" else {
+            
+            print("NICK: Caption must be entered")
+            return
+            
+        }
+        
+        guard let img = imageAdd.image, imageSelected == true else {
+            
+            print("NICK: Image must be selected")
+            return
+        }
+        
+        if let imgData = UIImageJPEGRepresentation(img, 0.2) {
+            
+            let imgUid = NSUUID().uuidString
+            let metadata = FIRStorageMetadata()
+            metadata.contentType = "image/jpeg"
+            
+            DataService.ds.REF_POST_IMAGES.child(imgUid).put(imgData, metadata: metadata, completion: { (metadata, error) in
+                
+                if error != nil {
+                    print("NICK: Unable to upload image to Firebase storage")
+                } else {
+                    
+                    print("NICK: Successfully upload to Firebase storage")
+                    
+                    let downloadURL = metadata?.downloadURL()?.absoluteString
+                    self.postToFirebase(imgUrl: downloadURL!)
+                    
+                }
+                
+            })
+            
+        }
+        
+    }
+    
+    func postToFirebase(imgUrl: String) {
+        
+        let post: Dictionary<String, AnyObject> = [
+            "caption" : captionField.text! as AnyObject,
+            "imageUrl" : imgUrl as AnyObject,
+            "likes" : 0 as AnyObject
+            
+        ]
+        
+        let firebasePost = DataService.ds.REF_POSTS.childByAutoId()
+        firebasePost.setValue(post)
+        
+        captionField.text = ""
+        imageSelected = false
+        imageAdd.image = UIImage(named: "add-image")
+        print("NICK: THREADE \(Thread.current)")
+        
+    }
     
     @IBAction func signOutTapped(_ sender: UIButton) {
         
@@ -98,17 +158,13 @@ extension FeedVC: UITableViewDataSource {
             
             cell.configureCell(post: post, img: img)
             
-            return cell
-            
         } else {
             
             cell.configureCell(post: post)
             
-            return cell
-            
         }
         
-        
+        return cell
         
         
     }
@@ -128,6 +184,7 @@ extension FeedVC: UIImagePickerControllerDelegate, UINavigationControllerDelegat
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             imageAdd.contentMode = .scaleAspectFill
             imageAdd.image = pickedImage
+            imageSelected = true
         }
         
         imagePicker?.dismiss(animated: true, completion: nil)
